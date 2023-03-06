@@ -66,11 +66,13 @@ class HiQnetTransportTcpUdp {
     {
        this.tcpSocket?.end('Closing the connection');
     }
-    sendMessage(msg:Buffer) 
+    sendTcpMessage(msg:Buffer) 
     {
         this.tcpSocket?.write(msg, () =>{
             console.log(`Sent data: ${msg}`);
         })
+    }
+    sendUdpMessage(msg:Buffer){
 
         this.udpSocket?.send(msg, 0, msg.length, this.HIQNET_PORT, this.tcpHost, (err) => {
             if (err) {
