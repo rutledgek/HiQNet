@@ -39,6 +39,12 @@ class HiQnetTransportTcpUdp {
         this.udpSocket = createSocket({type: 'udp4', reuseAddr: true})
         this.udpSocket.bind(this.udpPort);
         */
+        
+        // Check if the socket exists and if not create a new one before connecting.
+        if (!this.tcpSocket) {
+            this.tcpSocket = new Socket();
+        }
+        
         // Craete a TCP Socet and connect it to the specified hots and port
         this.tcpSocket?.connect({ host: this.tcpHost, port:this.HIQNET_PORT })
     }
