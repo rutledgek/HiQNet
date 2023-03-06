@@ -4,7 +4,7 @@ import { createSocket } from 'dgram';
 
 
 
-class TcpTransport {
+class HiQnetTransportTcpUdp {
 
     private udpSocket: udp.Socket | null;
     private tcpSocket: Socket | null;
@@ -32,4 +32,4 @@ class TcpTransport {
 
 
 
-export default TcpTransport;n
+export default HiQnetTransportTcpUdp;
