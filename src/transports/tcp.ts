@@ -84,7 +84,7 @@ class HiQnetTransportTcpUdp {
     }
     messageReceived(msg:Buffer) 
     {
-        console.log(msg.toString('utf8'));
+        console.log(msg);
 
 
 
