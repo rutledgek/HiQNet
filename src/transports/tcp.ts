@@ -3,7 +3,7 @@ import udp from 'node:dgram';
 
 
 
-class HiQnetTransportTcpUdp {
+export class TCP {
     
     private HIQNET_PORT = 3804;
     private tcpSocket: Socket | null;
@@ -95,4 +95,3 @@ class HiQnetTransportTcpUdp {
 
 
 
-export default HiQnetTransportTcpUdp;
