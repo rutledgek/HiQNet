@@ -2,11 +2,11 @@
   "name": "hiqnet",
   "version": "1.0.0",
   "description": "A project to send commands to hiqnet devices",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "test",
     "lint": "eslint . --fix",
-    "start": "ts-node src/index.ts"
+    "start": "ts-node src/main.ts"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
+    "ip-address": "^8.1.0",
     "net": "^1.0.2"
   }
 }
